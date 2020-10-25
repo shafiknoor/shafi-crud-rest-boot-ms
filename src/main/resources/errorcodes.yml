@@ -1,0 +1,43 @@
+codesList:
+
+    "INTERNAL_FAILURE": 
+        type: E
+        exceptionCode: "5022"
+        httpStatus: "503"
+        exceptionMsg: "TECHNICAL  SERVICE FAILURE."
+        exceptionDetails: "A Server error has prevented your request from being processed. Please  reachout to Support Team."
+
+    "NO_DATA_FOUND":
+        type: I
+        exceptionCode: "5026"
+        httpStatus: "404"
+        exceptionMsg: "NO DATA FOUND."
+        exceptionDetails: "Record not found."
+
+    "DATA_CONFLICT":
+        type: I
+        exceptionCode: "5026"
+        httpStatus: "409"
+        exceptionMsg: "DATA CONFLICT."
+        exceptionDetails: "User with same email exists."
+                
+    "INSUFFECIENT_MANDATORY_DATA": 
+        type: E
+        exceptionCode: "3002"
+        httpStatus: "400"
+        exceptionMsg: "INSUFFICIENT MANDATORY DATA PROVIDED."
+        exceptionDetails: "memberUid is mandatory"        
+
+    "INVALID_FORMAT_DATE":
+        type: E
+        exceptionCode: "5029"
+        httpStatus: "400"
+        exceptionMsg: "INVALID FIELD VALUE."
+        exceptionDetails: "Input Date format is Invalid, Date format Should be dd-MMM-yyyy."
+        
+    "FUTURE_INVALID_DATE":
+        type: E
+        exceptionCode: "5029"
+        httpStatus: "400"
+        exceptionMsg: "INVALID FIELD VALUE."
+        exceptionDetails: "Date of Birth is Future Date."
