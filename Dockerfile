@@ -6,5 +6,5 @@ FROM openjdk:8-jdk-alpine
 EXPOSE 8080
 WORKDIR /opt/app
 COPY . /opt/app/
-RUN ls /opt/app
-ENTRYPOINT ["java", "-jar", "/opt/app/spring-boot-application.jar"]
+RUN ls /opt/app/target
+ENTRYPOINT ["java", "-jar", "/opt/app/target/intellect-boot-cud-jar.jar"]
