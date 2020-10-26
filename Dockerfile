@@ -7,3 +7,4 @@ EXPOSE 8080
 WORKDIR /opt/app
 COPY . /opt/app
 RUN ls /opt/app/target
+CMD ["java", "-jar", "/opt/app/target/intellect-boot-cud-jar.jar"]
