@@ -1,5 +1,5 @@
-FROM java:8-jre-alpine
+FROM openjdk:8-jdk-alpine
 EXPOSE 8080
-RUN mkdir /app
-COPY /target/intellect-boot-cud-jar.jar /app/spring-boot-application.jar
+WORKDIR /opt/app
+COPY /target/intellect-boot-cud-jar.jar /opt/app/spring-boot-application.jar
 ENTRYPOINT ["java", "-jar", "/app/spring-boot-application.jar"]
