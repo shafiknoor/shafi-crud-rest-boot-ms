@@ -18,4 +18,4 @@ RUN ["mvn", "package"]
 
 ADD target/intellect-boot-cud-jar.jar app.jar
 RUN bash -c 'touch /app.jar'
-["java", "-jar", "/app.jar"]
+ENTRYPOINT ["java", "-jar", "/app.jar"]
