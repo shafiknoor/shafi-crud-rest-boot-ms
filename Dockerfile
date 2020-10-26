@@ -2,7 +2,6 @@ FROM openjdk:11 as builder
 WORKDIR application
 COPY ./pom.xml ./pom.xml
 COPY mvnw .
-COPY .mvn .mvn
 COPY ./src ./src
 RUN ["chmod", "+x", "mvnw"]
 RUN ./mvnw dependency:go-offline -B
