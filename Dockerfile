@@ -5,6 +5,6 @@ RUN mvn -f pom.xml clean package install
 FROM openjdk:8-jdk-alpine
 EXPOSE 8080
 WORKDIR /opt/app
-ls /opt/app
+RUN ls /opt/app
 COPY /target/intellect-boot-cud-jar.jar /opt/app/intellect-boot-cud-jar.jar
 ENTRYPOINT ["java", "-jar", "/opt/app/intellect-boot-cud-jar.jar"]
