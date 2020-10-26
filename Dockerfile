@@ -8,12 +8,10 @@ VOLUME /tmp
 WORKDIR /code
 
 ADD pom.xml /code/pom.xml  
-RUN ["mvn", "dependency:resolve"]  
-RUN ["mvn", "verify"]
 
 # Adding source, compile and package into a fat jar
 ADD src /code/src  
-RUN ["mvn", "package"]
+RUN mvn package
 
 ADD target/intellect-boot-cud-jar.jar app.jar
 RUN bash -c 'touch /app.jar'
