@@ -4,9 +4,8 @@ COPY pom.xml .
 RUN mvn -f pom.xml clean package
 FROM openjdk:8-jdk-alpine
 EXPOSE 8080
+VOLUME /tmp
 WORKDIR /code
-RUN apt-get update  
-RUN apt-get install -y maven
 
 ADD pom.xml /code/pom.xml  
 RUN ["mvn", "dependency:resolve"]  
