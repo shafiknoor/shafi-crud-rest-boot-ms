@@ -1,5 +1,6 @@
 FROM openjdk:8-jdk-alpine
 EXPOSE 8080
+RUN mvn -f pom.xml clean package install
 WORKDIR /opt/app
 COPY . /opt/app/
 RUN ls /opt/app
